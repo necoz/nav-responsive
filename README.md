@@ -10,6 +10,6 @@
 <br />
 <b>Get Started</b><br />
 git clone git@github.com:necoz/nav-responsive.git<br />
-cd NavExercise<br />
+cd nav-responsive<br />
 npm install<br />
 npm start<br />
