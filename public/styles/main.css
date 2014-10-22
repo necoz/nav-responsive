@@ -1,0 +1,335 @@
+/* Structure */
+@import "fonts.css";
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  color: #FFF}
+
+button:focus {
+  outline:0}
+
+ul { 
+  list-style-type: none; 
+  padding: 0;
+  margin: 0}
+
+/* Presets */
+.hide {
+  display: none}
+
+/* Header MAIN */  
+header {
+  background: #ec008c;
+  float: left;
+  width: 100%}
+
+h1 {
+  line-height: 24px;
+  float: left;
+  margin: 24px 48px 22px 24px}
+
+h1 a {
+  display: block;
+  line-height: 24px;  
+  width: 60px;
+  background: url(/images/HUGE-white.png) no-repeat;
+  background-size: 60px 24px;
+  text-indent: -5000px;
+  overflow: hidden}
+
+@media only screen and (max-device-width: 768px) {
+/* Mobile CSS */
+  body {
+    max-width: 768px;
+    overflow-x: hidden}    
+    
+  h1 {
+    margin: 0;
+    width: 100%;
+    background: #ec008c}
+
+  h1 a {
+    margin: 18px 0 18px 24px;
+    display: inline-block}
+    
+/* Mobile NAV */  
+  nav {
+    display: inline-block;
+    width: 300px}
+
+  .ham {
+    cursor: pointer;
+    float: left;
+    margin: 20px 48px 20px 24px;
+    text-indent: -999px;
+    overflow: hidden;
+    width: 24px;
+    height: 20px;
+    display: block;
+    background: url(/images/ico-ham.png) no-repeat;
+    border: none}
+
+  .mn_mobile {
+    z-index: 32;
+    background: #FFF;
+    margin-left: -300px;
+    width: 300px;
+    height: 100%;
+    position: absolute}
+  
+  .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    text-indent: -999px;
+    overflow: hidden;
+    background: none;
+    z-index: 30}
+
+  .menu {  
+    background: #FFF;
+    width: 300px}
+
+  .mn_mobile.anima_open {
+    -webkit-transition: 0.4s ease-in-out;
+    -moz-transition: 0.4s ease-in-out;
+    -ms-transition: 0.4s ease-in-out;
+    -o-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+    margin-left: 0}   
+
+  .mn_mobile.anima_close {
+    -webkit-transition: 0.4s ease-in-out;
+    -moz-transition: 0.4s ease-in-out;
+    -ms-transition: 0.4s ease-in-out;
+    -o-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+    margin-left: -300px}
+
+  .btn_close {
+    cursor: pointer;
+    position: absolute;
+    z-index: 32;
+    right: 24px;
+    top: 24px;
+    text-indent: -999px;
+    overflow: hidden;
+    border: none;
+    width: 20px;
+    height: 20px;
+    background: url(/images/ico-close.png) no-repeat;
+   transition: all 0.3s linear}
+  
+  .btn_close:hover {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg)}
+    
+  .menu a,
+  .menu label{
+    cursor: pointer;
+    position: relative;
+    z-index: 20;
+    display: block;
+    text-decoration: none;
+    padding: 23px 24px 22px;
+    color: rgba(0, 0, 0, 0.5);
+    font: Normal 21px HUGEAvantGardeBold;   
+    text-decoration: none}
+    
+  .menu label:after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 27px;
+    right: 10px;
+    background: url(/images/ac-ico.png) left 6px no-repeat}
+
+  .menu input:checked + label:after,
+  .menu input:checked + label:hover:after{
+    background: url(/images/ac-ico.png) right 6px no-repeat}
+  .menu input{
+    display: none}
+  .menu ul{
+    margin-top: -1px;
+    overflow: hidden;
+    height: 0px;
+    position: relative;
+    z-index: 10;
+    -webkit-transition: height 0.3s ease-in-out;
+    -moz-transition: height 0.3s ease-in-out;
+    -o-transition: height 0.3s ease-in-out;
+    -ms-transition: height 0.3s ease-in-out;
+    transition: height 0.3s ease-in-out}
+
+  .menu ul li a{
+    width: 100%;
+    display: inline-block;
+    padding: 23px 24px 22px;
+    font: Normal 16px Galaxie;
+    color: rgba(0, 0, 0, 0.5);
+    text-decoration: none}
+
+  .menu ul li a:hover{
+    color: #ec008c;
+    background: #EEE}
+
+  .menu input:checked ~ ul{
+    -webkit-transition: height 0.5s ease-in-out;
+    -moz-transition: height 0.5s ease-in-out;
+    -o-transition: height 0.5s ease-in-out;
+    -ms-transition: height 0.5s ease-in-out;
+    transition: height 0.5s ease-in-out}
+    
+  .menu input:checked ~ ul.ac-01 {
+    height: 268px}
+    
+  .menu input:checked ~ ul.ac-02 {
+    height: 469px}
+    
+  .menu input:checked ~ ul.ac-03 {
+    height: 402px}
+    
+  .menu input:checked ~ ul.ac-04 {
+    height: 603px}
+    
+  .copy {
+    position: absolute;
+    bottom: 0;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.5);
+    font-family: Helvetica Neue Regular, Tahoma, Arial}
+
+/* Mobile SECTION */    
+  section { 
+    padding: 278px 0 0 24px;
+    max-width: 768px;    
+    background: url(/images/background-image.jpg) no-repeat; 
+    -webkit-background-size: 480px 240px;
+    -moz-background-size: 480px 240px;
+    -o-background-size: 480px 240px;
+    background-size: 480px 240px;    
+    width: 100%}
+    
+  dl {
+    display: inline-block;
+    margin: 0}
+
+  dt {
+    color: rgba(0, 0, 0, 0.5);
+    width: 300px;
+    font: Normal 44px HUGEAvantGardeBold}    
+    
+  dd {
+    font: Normal 14px Galaxie;
+    margin: 50px 0 0 0;
+    width: 360px;
+    color: rgba(0, 0, 0, 0.5)}
+}
+
+@media only screen and (min-device-width: 768px) {
+/* Desktop CSS */
+  header {
+    background: #ec008c}
+    
+  .btn_close,input,.ham,.copy  {
+    display: none}
+    
+/* Desktop NAV */    
+  .menu {	
+    position: relative;
+    margin: 0;
+    padding: 0;
+    z-index: 30}
+
+  .menu li {
+    float: left;
+    position: relative;
+    background: #ec008c;
+    color: #FFF}
+
+  .menu li:hover  {
+    background: #FFF} 
+
+  .menu li:hover > label,  
+  .menu li:hover > a {  
+    color: #ec008c}
+
+  .menu li label,  
+  .menu li a {
+    display: block;
+    text-decoration: none;
+    padding: 22px 24px 22px;
+    color: #fff;
+    font: Normal 21px HUGEAvantGardeBold;   
+    text-decoration: none}
+    
+  .menu li ul {
+    padding: 0;
+    z-index: 30;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 222px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    display: none;
+    opacity: 0;
+    visibility: hidden}
+    
+  .menu li ul li { 
+    text-align: left;
+    float: none;
+    background: #FFF; 
+    display: block}
+     
+  .menu li:hover ul {
+    display: block;
+    opacity: 1;
+    visibility: visible}
+    
+  .menu li ul li:hover { 
+    background: #EEE}
+    
+  .menu li ul li a {
+    padding: 18px 0 18px 15px;
+    font: Normal 16px Galaxie;  
+    color: #000}
+    
+/* Desktop SECTION */    
+  section { 
+    background: url(/images/background-image.jpg) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    float: left;
+    height: 640px;
+    width: 100%}
+
+  dl {
+    padding-top: 170px;
+    width: 968px;
+    margin: 0 auto}
+
+  dt {
+    display: block;
+    margin: 0 auto;
+    width: 792px;
+    font: Normal 120px HUGEAvantGardeBold}
+  
+  dd {
+    font: Normal 24px Galaxie;  
+    color: rgba(0, 0, 0, 0.5);
+    display: block;
+    clear: both;
+    padding-top: 200px}
+}

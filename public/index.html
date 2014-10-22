@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+  <title>HUGE NavExercise</title>
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+  <header>
+    <button class="ham" value="Menu">Menu</button>  
+    <button class="hide btn_close" value="Close">Close</button>      
+    <button class="hide mask" value="Close">Close</button>      
+    </div>
+    <div class="mn_mobile">
+      <h1><a href="javascript:;" title="Huge">Huge</a></h1>
+      <nav>
+        <ul class="menu">
+          <li><a href="#" title="Work">Work</a></li>
+          <li>
+            <input id="ac-1" name="accordion-1" type="checkbox" />
+            <label for="ac-1">About</label>          
+            <ul class="ac-01">
+                <li><a href="#list01" title="What we do">What we do</a></li>
+                <li><a href="#list02" title="How we work">How we work</a></li>                        
+                <li><a href="#list03" title="Leadership">Leadership</a></li>                                                
+                <li><a href="#list04" title="Our offices">Our offices</a></li>                                                                        
+            </ul>
+          </li> 
+          <li>
+            <input id="ac-2" name="accordion-2" type="checkbox" />
+            <label for="ac-2">Careers</label>          
+            <ul class="ac-02"> 
+                <li><a href="#list01" title="Client Services">Client Services</a></li>
+                <li><a href="#list02" title="Creative">Creative</a></li>                        
+                <li><a href="#list03" title="Motion & Media">Motion & Media</a></li>                                                
+                <li><a href="#list04" title="People">People</a></li>                                                                        
+                <li><a href="#list05" title="Strategy">Strategy</a></li>                                                                        
+                <li><a href="#list06" title="Technology">Technology</a></li>                                                                        
+                <li><a href="#list07" title="UX & Product Design">UX & Product Design</a></li>                                                                                                
+            </ul>
+          </li>                    
+          <li>
+            <input id="ac-3" name="accordion-3" type="checkbox" />
+            <label for="ac-3">Ideas</label>           
+            <ul class="ac-03">               
+                <li><a href="#list01" title="All ideas">All ideas</a></li> 
+                <li><a href="#list02" title="Reports">Reports</a></li> 
+                <li><a href="#list03" title="Perspectives">Perspectives</a></li>
+                <li><a href="#list04" title="Books">Books</a></li> 
+                <li><a href="#list05" title="Videos">Videos</a></li> 
+                <li><a href="#list06" title="Tech">Tech</a></li>
+            </ul>
+          </li>                 
+          <li><a href="" title="News">News</a></li> 
+          <li><a href="" title="Events">Events</a></li>                
+          <li>
+            <input id="ac-4" name="accordion-4" type="checkbox" />
+            <label for="ac-4">Contact</label>                 
+            <ul class="ac-04"> 
+                <li><a href="" title="Atlanta">Atlanta</a></li> 
+                <li><a href="" title="Brooklyn">Brooklyn</a></li> 
+                <li><a href="" title="Washington">Washington</a></li>
+                <li><a href="" title="London">London</a></li> 
+                <li><a href="" title="Los Angeles">Los Angeles</a></li> 
+                <li><a href="" title="Portland">Portland</a></li>                
+                <li><a href="" title="Rio de Janeiro">Rio de Janeiro</a></li>                
+                <li><a href="" title="San Fracisco">San Fracisco</a></li>                                        
+                <li><a href="" title="Singapore">Singapore</a></li>                                                                
+            </ul>
+          </li>            
+        </ul>    
+      </nav>
+      <p class="copy">© 2014 Huge. All Rights Reserved.</p>
+    </div>  
+  </header>
+
+  <section value="close">
+    <dl>
+      <dt>Get paid for giving a shit.</dt>
+      <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</dd>
+    </dl>
+  </section>
+  
+  <script type="text/javascript">   
+    var mask = document.getElementsByClassName('mask')[0];  
+    var btn = document.getElementsByClassName('btn_close')[0];  
+    var boxOne = document.getElementsByClassName('mn_mobile')[0];
+
+    document.getElementsByClassName('ham')[0].onclick = function() {
+      if(this.innerHTML === 'Menu') 
+      { 
+        mask.classList.remove('hide');      
+        btn.classList.remove('hide');
+        boxOne.classList.remove('anima_close');      
+        boxOne.classList.add('anima_open');
+      } else {
+        this.innerHTML = 'Menu';
+        var computedStyle = window.getComputedStyle(boxOne),
+            marginLeft = computedStyle.getPropertyValue('margin-left');
+        boxOne.style.marginLeft = marginLeft;
+        boxOne.classList.remove('anima_open');    
+      }  
+    } 
+    
+    document.getElementsByClassName('btn_close')[0].onclick = function() {
+      if(this.innerHTML === 'Close') 
+      { 
+        mask.classList.add('hide');
+        btn.classList.add('hide');      
+        boxOne.classList.remove('anima_open');
+        boxOne.classList.add('anima_close');
+      } else {
+        this.innerHTML = 'Close';
+        var computedStyle = window.getComputedStyle(boxOne),
+            marginLeft = computedStyle.getPropertyValue('margin-left');
+        boxOne.style.marginLeft = marginLeft;
+        boxOne.classList.remove('anima_close');    
+      }  
+    }     
+    
+    document.getElementsByClassName('mask')[0].onclick = function() {
+      if(this.innerHTML === 'Close') 
+      { 
+        mask.classList.add('hide');            
+        btn.classList.add('hide');      
+        boxOne.classList.remove('anima_open');
+        boxOne.classList.add('anima_close');
+      } else {
+        this.innerHTML = 'Close';
+        var computedStyle = window.getComputedStyle(boxOne),
+            marginLeft = computedStyle.getPropertyValue('margin-left');
+        boxOne.style.marginLeft = marginLeft;
+        boxOne.classList.remove('anima_close');    
+      }  
+    }                 
+  </script>  
+</body>
+</html>
