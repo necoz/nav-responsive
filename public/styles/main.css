@@ -39,7 +39,7 @@ h1 a {
   text-indent: -5000px;
   overflow: hidden}
 
-@media only screen and (max-device-width: 768px) {
+@media only screen and (max-width: 768px) {
 /* Mobile CSS */
   body {
     max-width: 768px;
@@ -234,7 +234,7 @@ h1 a {
     color: rgba(0, 0, 0, 0.5)}
 }
 
-@media only screen and (min-device-width: 768px) {
+@media only screen and (min-width: 768px) {
 /* Desktop CSS */
   header {
     background: #ec008c}
@@ -311,7 +311,7 @@ h1 a {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    float: left;
+    display: inline-block;
     height: 640px;
     width: 100%}
 
